@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>PFE Mahamdi</title>
+
+    <meta name="description" content="PFE presentation using HTML">
+    <meta name="author" content="Mahamdi Mohammed">
+
+    <!--    <meta name="apple-mobile-web-app-capable" content="yes"/>-->
+    <!--    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>-->
+
+    <!--    <meta name="viewport"-->
+    <!--          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.min.css"
+          id="theme">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.min.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--    <script>-->
+    <!--        (function (i, s, o, g, r, a, m) {-->
+    <!--            i['GoogleAnalyticsObject'] = r;-->
+    <!--            i[r] = i[r] || function () {-->
+    <!--                (i[r].q = i[r].q || []).push(arguments)-->
+    <!--            }, i[r].l = 1 * new Date();-->
+    <!--            a = s.createElement(o),-->
+    <!--                m = s.getElementsByTagName(o)[0];-->
+    <!--            a.async = 1;-->
+    <!--            a.src = g;-->
+    <!--            m.parentNode.insertBefore(a, m)-->
+    <!--        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');-->
+
+    <!--        ga('create', 'UA-44724955-1', 'dataplusscience.com');-->
+    <!--        ga('send', 'pageview');-->
+    <!--    </script>-->
+
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+        <!--first page  -->
+        <section>
+            <h2>Projet de fin d’étude</h2>
+            <br>
+            <h4>Pour l’obtention du diplôme d’ingénieur d’Etat en Informatique</h4>
+            <br>
+            <span class="Name">	<img src="images/grad.png" width=300 height=250></span>
+            <br>
+        </section>
+        <!--main page  -->
+        <section>
+            <h4>Ecole nationale supérieure d'informatique</h4>
+            <small>Le 06/07/2020 <a href="http://www.esi.dz">ESI ex INI, Alger</a></small>
+            <br><br>
+            <h3 style="color: #5f6eff;">Apprentissage automatique pour la détection d’anomalies dans un réseau Iot</h3>
+            <br>
+            <p>
+                <small>Réalisé par <a href="www.twitter.com/@MahamdiAmine/">Mahamdi Mohammed </a></small>
+                <br>
+                <small>Encadré par <a href="http://esi.dz">Mme Meziani Leila</a></small>
+                <br>
+                <small>2019/2020</small>
+            </p>
+        </section>
+        <!--plan-->
+        <section>
+            <h2><i>Le Plan</i></h2>
+            <ol>
+                <li>Introduction (Contexe, Problématique, Objectifs)</li>
+                <li>Iot</li>
+                <li>Apprentissage automatique</li>
+                <li>Sécurité de l'Iot</li>
+                <li>Les travaux existants</li>
+                <li>La solution proposé</li>
+                <li>Conception et réalisation</li>
+                <li>Résultats</li>
+                <li>Interprétation des résultats</li>
+                <li>Conclusion et perspectives</li>
+            </ol>
+        </section>
+        <!--1. Introduction (contexe)-->
+        <section>
+            <h3>1. Introduction (contexe)</h3>
+
+            <p> L’Internet des objets a pour objectif de permettre aux différents objets de se connecter
+                n'importe quand, n'importe où en utilisant n'importe quel chemin et n'importe quel service.
+                L’Internet n’a jamais connecté autant de systèmes informatiques qu’aujourd’hui, et le nombre des
+                objets connectés est en croissance.
+            </p>
+            <br>
+            <p>
+                Ces objets n’intégrant que rarement des mécanismes de protection contre les attaques. Donc
+                la sécurité de leurs utilisateurs, qu’ils soient des individus ou des entreprises est en menace.
+
+            </p>
+
+        </section>
+        <!--1. Introduction (Problématique)-->
+        <section>
+            <h3>1. Introduction (Problématique)</h3>
+
+            <p> La mise en place d’une solution de sécurité applicable à l’ensemble des objets intelligents
+                est très difficile à cause de variétés des protocoles, différence des capacités hardware et l’absence
+                de mises à jour par les constructeurs dans la majorité des cas.
+            </p>
+            <br>
+            <p> Les travaux effectués en termes de détection d’intrusion se concentrent essentiellement sur
+                des analyses du flux réseau, puisqu’il n’y a pas besoin de considérer les ressources matérielles des
+                objets ni même les applications qui sont exécutées dessus.
+            </p>
+
+        </section>
+        <!--1. Introduction (Objectifs)-->
+        <section>
+            <h3>1. Introduction (Objectifs)</h3>
+
+            <p> Afin de répondre à la problématique posée, une solution doit être proposée tout
+                en répondant aux objectifs suivants :
+            </p>
+            <br>
+            <ol>
+                <li>Comprendre les caractéristiques de l’écosystème des objets connectés.</li>
+                <li>La mise en place d’un programme capable d’analyser le flux réseau en utilisant des
+                    techniques d’apprentissage automatique.
+                </li>
+                <li>Implémenter et optimiser divers algorithmes d’apprentissage machine pour la classification
+                    et la détection des attaques.
+                </li>
+                <li>Tester l’efficacité du mécanisme de sécurité proposé.</li>
+            </ol>
+        </section>
+        <!--2. Iot-->
+        <section>
+            <h3>2. Iot</h3>
+            <span class="Name">	<img src="images/Iot.png" width=1280 height=600></span>
+            <br>
+        </section>
+        <!--2. Iot: définition -->
+        <section>
+            <h3>2. Iot: définition</h3>
+            <h4>Définition</h4>
+
+            <q> infrastructure mondiale pour la société de l'information, qui permet de disposer de services évolués en
+                interconnectant des objets.</q>
+            <br>
+            <br>
+            <p> - Union internationale des télécommunications</p>
+        </section>
+        <!--2. Iot: Les caractéristiques de L’Iot-->
+        <section>
+            <h3>2. Iot: Les caractéristiques de L’Iot</h3>
+            <h4>Les caractéristiques de L’Iot</h4>
+            <br>
+            <ol>
+                <li>Inter connectivité</li>
+                <li>Hétérogénéité</li>
+                <li>Le changement dynamiques</li>
+                <li>L’énorme échelle</li>
+                <li>Connectivité</li>
+                <li>Sécurité</li>
+                <li>Les services liés aux objets</li>
+            </ol>
+        </section>
+        <!--2. Iot: L’Architecture  de L’Iot-->
+        <section>
+            <h3>2. Iot: L’Architecture de L’Iot</h3>
+            <h4>L’Architecture de L’Iot</h4>
+            <span class="Name">	<img src="images/iot_arch.png" width=1200 height=600></span>
+        </section>
+        <!--2. Iot: Les technologies de L’Iot-->
+        <section>
+            <h3>2. Iot: Les technologies de L’Iot</h3>
+            <h4>Les technologies de L’Iot</h4>
+            <br>
+            <ol>
+                <li>Les technologies qui permettent aux objets d’acquérir des connaissances contextuelles.</li>
+                <li>Les technologies qui permettent aux ces objets de traiter ces informations.</li>
+                <li>Les technologies pour améliorer sécurité et confidentialité.</li>
+            </ol>
+        </section>
+        <!--3. apprentissage automatique-->
+        <section>
+            <h3>3. apprentissage automatique</h3>
+            <br>
+            <span class="Name">	<img src="images/ai.jpg" width=370 height=340></span>
+        </section>
+        <!--3. apprentissage automatique-->
+        <section>
+            <h3>3. Apprentissage automatique</h3>
+            <br>
+            <br>
+            <br>
+            <h6>Intelligence artificiel Vs apprentissage automatique Vs apprentissage approfondie</h6>
+        </section>
+        <!--3. apprentissage automatique: Types d’apprentissage-->
+        <section>
+            <h3>3. Apprentissage automatique</h3>
+            <h4>Les types d’apprentissage</h4>
+            <h4>A. L'apprentissage supervisé</h4>
+            <span class="Name">	<img src="images/app_super.png" width=1000 height=540></span>
+        </section>
+        <section>
+            <h3>3. Apprentissage automatique</h3>
+            <h4>Les types d’apprentissage</h4>
+            <h4>B. L'apprentissage non-supervisé</h4>
+            <span class="Name">	<img src="images/app_non_sup.png" width=1000 height=540></span>
+        </section>
+        <section>
+            <h3>3. Apprentissage automatique</h3>
+            <h4>Les types d’apprentissage</h4>
+            <h4>C. L'apprentissage par renforcement</h4>
+            <span class="Name">	<img src="images/app_ren.png" width=1000 height=540></span>
+        </section>
+        <!--4. Sécurité de l'Iot: Les anomalies existants dans les réseaux Iot-->
+        <section>
+            <h2>4. Sécurité de l'Iot</h2>
+            <h4>Les anomalies existants dans les réseaux Iot</h4>
+            <br>
+            <ul>
+                <li>Deauthentication, Disassociation</li>
+                <li>Authentication Request Flooding Attack</li>
+                <li>Fake Power Saving</li>
+                <li>CTS Flooding</li>
+                <li>RTS Flooding</li>
+                <li>Probe Request Flooding</li>
+                <li>Probe Response Flooding</li>
+                <li>Evil twin</li>
+                <li>Rogue Access Point</li>
+            </ul>
+        </section>
+        <!--4. Sécurité de l'Iot: Les contres mesures-->
+        <section>
+            <h2>4. Sécurité de l'Iot</h2>
+            <h4>Les contres mesures</h4>
+            <br>
+            <ul>
+                <li>Antivirus</li>
+                <li>Pare-feu</li>
+                <li>Les IDS</li>
+            </ul>
+        </section>
+        <!--5. Les travaux existants-->
+        <section>
+            <h2>5. Les travaux existants</h2>
+            <span class="Name">	<img src="images/trav.PNG" width=924 height=574></span>
+        </section>
+        <!--5. La solution proposé-->
+        <section>
+            <h2>5. La solution proposé</h2>
+            <h3>Architecture globale</h3>
+            <span class="Name">	<img src="images/arch.PNG" width=565 height=500></span>
+        </section>
+        <!--5. La solution proposé-->
+        <section>
+            <h2>5. La solution proposé</h2>
+            <h3>Les algorithmes d’apprentissage</h3>
+            <br>
+            <ul>
+                <li> Naive Bayes</li>
+                <li> Random Forest</li>
+                <li> XGBoost</li>
+            </ul>
+        </section>
+        <!--6. Conception et réalisation-->
+        <section>
+            <h2>6. Conception et réalisation</h2>
+            <h3>Présentation de la base de données</h3>
+            <p>
+                AWID (AEGEAN WI-FI INTRUSION)DATASET <br>
+                <a href="http://icsdweb.aegean.gr/awid/">AWID site web</a>
+            </p>
+            <span class="Name">	<img src="images/AWID_box.png" width=370 height=340></span>
+            <br>
+        </section>
+        <!--6. Conception et réalisation : AWID-->
+        <section>
+            <h2>6. Conception et réalisation</h2>
+            <small>Environnement de collecte de données du dataset AWID</small>
+            <br>
+            <span class="Name">	<img src="images/env_AWID.PNG" width=555 height=371></span>
+            <br>
+        </section>
+        <!--6. Conception et réalisation : AWID-->
+        <section>
+            <h2>6. Conception et réalisation</h2>
+            <small> Le nombre d’enregistrement pour chaque classe dans AWID-CLS-R</small>
+            <br>
+            <br>
+            <table style="width:100%">
+                <tr>
+                    <th>La classe</th>
+                    <th>Nombre d’enregistrement dans AWID-CLS-R-Trn</th>
+                    <th>Nombre d’enregistrement dans AWID-CLS-R-Tst</th>
+                </tr>
+                <tr>
+                    <td>Flooding</td>
+                    <td>48484 (2.7 %)</td>
+                    <td>8097 (1.407 %)</td>
+                </tr>
+                <tr>
+                    <td>Impersonation</td>
+                    <td>48522 (2.702 %)</td>
+                    <td>20079 (3.488 %)</td>
+                </tr>
+                <tr>
+                    <td>Injection</td>
+                    <td>65379 (3.641 %)</td>
+                    <td>16682 (2.898 %)</td>
+                </tr>
+                <tr>
+                    <td>Normal</td>
+                    <td>1633190 (90.956 %)</td>
+                    <td>530785 (92.207 %)</td>
+                </tr>
+            </table>
+            <br>
+        </section>
+        </section>
+        <!--6. Conception et réalisation : Sélection d'attributs-->
+        <section>
+            <h2>6. Conception et réalisation</h2>
+            <h3>Sélection d'attributs </h3>
+            <p> Pour réduir la dimension du données, et accelerer la classification, on choisi 4 ensembles </p>
+            <small>
+                <table style="width:125%;align-content: center">
+                    <tr>
+                        <th>L'ensemble</th>
+                        <th>La dimension</th>
+                        <th>Comment il a construit</th>
+                    </tr>
+                    <tr>
+                        <td>Ensemble 1</td>
+                        <td>153</td>
+                        <td>En prenant toutes les colonnes sauf celle qui ont un taux de valeur manquant égale à 1.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ensemble 2</td>
+                        <td>9</td>
+                        <td>En choisissant les 9 plus importantes colonnes dans le modelé généré par l’algorithme Random
+                            Forest avec un seul estimateur.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ensemble 3</td>
+                        <td>21</td>
+                        <td>En choisissant les 21 plus importantes colonnes dans le modelé générer par l’algorithme
+                            Random
+                            Forest avec 100 estimateurs.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ensemble 4</td>
+                        <td>18</td>
+                        <td>En choisissant les colonnes qui ont une importance plus de 0.03 dans le modelé générer par
+                            l’algorithme Random Forest avec 200 estimateurs
+                        </td>
+                    </tr>
+                </table>
+            </small>
+        </section>
+        <!--6. Conception et réalisation : Environnement technique-->
+        <section>
+            <h2>6. Conception et réalisation</h2>
+            <h3> Environnement technique </h3>
+            <span class="Name">	<img src="images/env.PNG" width=1000 height=300></span>
+            <br>
+        </section>
+        <!--7. Résultats-->
+        <section>
+            <h3>7. Résultats</h3>
+            <h3>Métriques d'évaluation</h3>
+            <p><i> Nous avons choisi les mesures d'évaluation suivants : </i></p>
+            <ol>
+                <li> La précision</li>
+                <li> F1-score</li>
+                <li> Recall</li>
+                <li> AUC</li>
+            </ol>
+        </section>
+        <!--Résultats-->
+        <section>
+            <h3>7. Résultats </h3>
+            <h5> Random Forest </h5>
+            <span class="Name">	<img src="images/results_RF.png" width=1024 height=437></span>
+            <br>
+        </section>
+        <section>
+            <h3>7. Résultats </h3>
+            <h5> Random Forest : ROC </h5>
+            <span class="Name">	<img src="images/roc%20curve/1.png" width=500 height=340></span>
+            <span class="Name">	<img src="images/roc%20curve/11.png" width=500 height=340></span>
+            <br>
+        </section>
+        <!--Résultats-->
+        <section>
+            <h3>7. Résultats </h3>
+            <h5> Naive-bayes </h5>
+            <span class="Name">	<img src="images/results_NB.png" width=1024 height=437></span>
+            <br>
+        </section>
+        <section>
+            <h3>7. Résultats </h3>
+            <h5> Naive-bayes : ROC </h5>
+            <span class="Name">	<img src="images/roc%20curve/2.png" width=500 height=340></span>
+            <span class="Name">	<img src="images/roc%20curve/22.png" width=500 height=340></span>
+            <br>
+        </section>
+        <!--Résultats-->
+        <section>
+            <h3>7. Résultats </h3>
+            <h5> XgBoost </h5>
+            <span class="Name">	<img src="images/results_XGboost.png" width=1024 height=437></span>
+            <br>
+        </section>
+        <section>
+            <h3>7. Résultats </h3>
+            <h5> XGBoost : ROC </h5>
+            <span class="Name">	<img src="images/roc%20curve/3.png" width=500 height=340></span>
+            <span class="Name">	<img src="images/roc%20curve/33.png" width=500 height=340></span>
+            <br>
+        </section>
+        <section>
+            <h3>7. Résultats </h3>
+            <h5> ROC de tous les algorithme </h5>
+            <span class="Name">	<img src="images/roc%20curve/ROC%20all%20the%20models.png" width=720
+                                        height=435></span>
+            <br>
+        </section>
+        <!--Résultats-->
+        <section>
+            <h2> 7. Résultats </h2>
+            <h3>Autres résultats </h3>
+            <br>
+            <br>
+            <br>
+            <p> L'algorithme KNN ne produit pas de bons résultats </p>
+            <br>
+            <p> L'exécution de l'algorithme SVM est très longue.(plus de 5 heures) </p>
+            <br>
+        </section>
+        <!--Interprétation des résultats-->
+        <section>
+            <h3> 8. Interprétation des résultats </h3>
+            <br>
+            <ul>
+                <li> Il est clair que l'ensemble 4 est le sous-ensemble de fonctionnalités le plus important, il
+                    donne presque les mêmes résultats que l'ensemble de tous les attributs.
+                </li>
+                <li> L'algorithme NaiveBayes ne prédit pas l'attaque de type impersonation, et sa précision de détecter
+                    l'attaque flooding est très faible.
+                </li>
+                <li> Les deux algorithmes RF et XGboost donnent des résultats similaires.</li>
+                <li> Les deux algorithmes RF et XGboost détectent les deux catégories : le flux normal et l'attaque
+                    impersonation avec une précision de 1.
+                </li>
+            </ul>
+        </section>
+        <!--Interprétation des résultats-->
+        <section>
+            <h3> 8. Interprétation des résultats </h3>
+            <br>
+            <ul>
+                <li> L'algorithme RF produit une bonne séparation entres les classes (la valeur de AUC est supérieure
+                    à 0.96 pour trois classes).
+                </li>
+                <li> Avec la métrique recall, le Classiﬁeur RF bien classifier le flux normal comme un flux normale
+                    avec une Précisons de 99.9999 %.
+                </li>
+                <li> Vu que les faux positifs et les faux négatifs ont un coût similaire donc La précision fonctionne
+                    mieux comme une métrique d'évaluation, Donc comme résultat final de ce projet, l’algorithme Random
+                    Forest est le meilleur algorithme pour la classification des attaques dans le dataset AWID.
+                </li>
+            </ul>
+
+        </section>
+        <!--Conclusion et perspectives -->
+        <section>
+            <h3> Conclusion et perspectives </h3>
+            <h4> Réponse à la problématique </h4>
+            <p>
+                * Nous avons réalisé des modèles basés sur d’apprentissage machine pour la classification et la
+                détection des attaques. Une comparaison de ces modèles en termes d'efficacité est fournie pour
+                sélectionner la meilleure approche pour résoudre la problématique.
+                <br>
+                <br>
+                * D'après les tests, le classifieur Random Forest donne de très bons résultats.
+                </br>
+            </p>
+        </section>
+        <!--Conclusion et perspectives -->
+        <section>
+            <h3> Conclusion et perspectives </h3>
+            <h4> Perspectives </h4>
+            <p>
+                Plusieurs perspectives d’évolution peuvent être envisagées, le travail réalisé peut être
+                complété et amélioré en ajoutant les fonctionnalités suivantes :
+            <p>
+            <ul>
+                <li> Entrainer les modèles sur un dataset qui contient plusieurs catégories d’attaques.</li>
+                <li> Implémenter cette solution sur un IDS pour assurer une détection d’intrusions en temps réel.</li>
+            </ul>
+        </section>
+        <!--the end -->
+        <section>
+            <h1>THE END</h1>
+        </section>
+        <!--any questions -->
+        <section>
+            <h1>Any question?</h1>
+        </section>
+        <!--than u -->
+        <section>
+            <h1>Thank you!</h1>
+        </section>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+
+<script>
+
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+        width: 1250,
+        height: 780,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 1.0,
+
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                    return !document.body.classList;
+                }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                    return !!document.querySelector('pre code');
+                }, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+
+</script>
+
+</body>
+</html>
+

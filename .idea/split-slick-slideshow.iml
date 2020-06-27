@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../PFE_Presentation-Mahamdi" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="normalize" level="application" />
+    <orderEntry type="library" name="slick" level="application" />
+    <orderEntry type="library" name="slick-theme" level="application" />
+    <orderEntry type="library" name="jquery.mousewheel" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="head" level="application" />
+    <orderEntry type="library" name="reveal" level="application" />
+    <orderEntry type="library" name="zenburn" level="application" />
+    <orderEntry type="library" name="black" level="application" />
+  </component>
+</module>
