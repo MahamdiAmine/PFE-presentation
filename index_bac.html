@@ -8,6 +8,13 @@
 
     <meta name="description" content="PFE presentation using HTML">
     <meta name="author" content="Mahamdi Mohammed">
+
+    <!--    <meta name="apple-mobile-web-app-capable" content="yes"/>-->
+    <!--    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>-->
+
+    <!--    <meta name="viewport"-->
+    <!--          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">-->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.min.css"
           id="theme">
@@ -24,6 +31,7 @@
         link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
+
 
 
 </head>
@@ -66,9 +74,10 @@
                 <li>Apprentissage automatique</li>
                 <li>Sécurité de l'Iot</li>
                 <li>Les travaux existants</li>
-                <li>La solution proposée</li>
-                <li>Réalisation</li>
-                <li>Tests et Résultats</li>
+                <li>La solution proposé</li>
+                <li>Conception et réalisation</li>
+                <li>Résultats</li>
+                <li>Interprétation des résultats</li>
                 <li>Conclusion et perspectives</li>
             </ol>
         </section>
@@ -129,9 +138,20 @@
             <span class="Name">	<img src="images/Iot.png" width=1280 height=600></span>
             <br>
         </section>
+        <!--2. Iot: définition -->
+        <section>
+            <h3>2. Iot: définition</h3>
+            <h4>Définition</h4>
+
+            <q> infrastructure mondiale pour la société de l'information, qui permet de disposer de services évolués en
+                interconnectant des objets.</q>
+            <br>
+            <br>
+            <p> - Union internationale des télécommunications</p>
+        </section>
         <!--2. Iot: Les caractéristiques de L’Iot-->
         <section>
-            <h3>2. Iot</h3>
+            <h3>2. Iot: Les caractéristiques de L’Iot</h3>
             <h4>Les caractéristiques de L’Iot</h4>
             <br>
             <ol>
@@ -152,13 +172,13 @@
         </section>
         <!--2. Iot: Les technologies de L’Iot-->
         <section>
-            <h3>2. Iot</h3>
+            <h3>2. Iot: Les technologies de L’Iot</h3>
             <h4>Les technologies de L’Iot</h4>
             <br>
             <ol>
                 <li>Les technologies qui permettent aux objets d’acquérir des connaissances contextuelles.</li>
-                <li>Les technologies qui permettent à ces objets de traiter ces informations.</li>
-                <li>Les technologies pour améliorer la sécurité et la confidentialité.</li>
+                <li>Les technologies qui permettent aux ces objets de traiter ces informations.</li>
+                <li>Les technologies pour améliorer sécurité et confidentialité.</li>
             </ol>
         </section>
         <!--3. apprentissage automatique-->
@@ -173,7 +193,7 @@
             <br>
             <br>
             <br>
-            <h6>Intelligence artificielle Vs apprentissage automatique Vs apprentissage approfondie</h6>
+            <h6>Intelligence artificiel Vs apprentissage automatique Vs apprentissage approfondie</h6>
         </section>
         <!--3. apprentissage automatique: Types d’apprentissage-->
         <section>
@@ -197,12 +217,18 @@
         <!--4. Sécurité de l'Iot: Les anomalies existants dans les réseaux Iot-->
         <section>
             <h2>4. Sécurité de l'Iot</h2>
-            <h4>Les anomalies existantes dans les réseaux Iot</h4>
+            <h4>Les anomalies existants dans les réseaux Iot</h4>
             <br>
             <ul>
-                <li>Injection</li>
-                <li>Flooding</li>
-                <li>Impersonation</li>
+                <li>Deauthentication, Disassociation</li>
+                <li>Authentication Request Flooding Attack</li>
+                <li>Fake Power Saving</li>
+                <li>CTS Flooding</li>
+                <li>RTS Flooding</li>
+                <li>Probe Request Flooding</li>
+                <li>Probe Response Flooding</li>
+                <li>Evil twin</li>
+                <li>Rogue Access Point</li>
             </ul>
         </section>
         <!--4. Sécurité de l'Iot: Les contres mesures-->
@@ -219,20 +245,17 @@
         <!--5. Les travaux existants-->
         <section>
             <h2>5. Les travaux existants</h2>
-            <br>
-            <small> Nous avons sélectionné les solutions qui ont utilisé le même jeu de données pour qu'on puisse les
-                commparer</small>
-            <span class="Name">	<img src="images/trav2.PNG" width=720 height=544></span>
+            <span class="Name">	<img src="images/trav.PNG" width=924 height=574></span>
         </section>
-        <!--6. La solution proposé-->
+        <!--5. La solution proposé-->
         <section>
-            <h2>6. La solution proposée</h2>
+            <h2>5. La solution proposé</h2>
             <h3>Architecture globale</h3>
             <span class="Name">	<img src="images/arch.PNG" width=565 height=500></span>
         </section>
-        <!--6. La solution proposé-->
+        <!--5. La solution proposé-->
         <section>
-            <h2>6. La solution proposée</h2>
+            <h2>5. La solution proposé</h2>
             <h3>Les algorithmes d’apprentissage</h3>
             <br>
             <ul>
@@ -241,48 +264,28 @@
                 <li> XGBoost</li>
             </ul>
         </section>
+        <!--6. Conception et réalisation-->
         <section>
-            <h3>6. La solution proposée</h3>
-            <h4>Les algorithmes d’apprentissage</h4>
-            <h5>Decision Tree</h5>
-            <small>L'idée derrière un arbre de décision est de rechercher une paire de valeur-variables dans l'ensemble
-                d'apprentissage et de le diviser de manière à générer les meilleurs deux sous-ensembles enfants.</small>
-            <small> L'objectif est de créer des branches et des feuilles sur la base d'un critère de fractionnement
-                optimal</small>
-            <span class="Name">	<img src="images/DT.PNG" width=681 height=412></span>
-        </section>
-        <section>
-            <h3>6. La solution proposée</h3>
-            <h4>Les algorithmes d’apprentissage</h4>
-            <h5>Random Forest</h5>
-            <small>Un grand nombre de modèles (Decision Trees) relativement non corrélés fonctionnant en comité
-                surclasseront
-                n'importe lequel des modèles constitutifs individuels.</small>
-            <span class="Name">	<img src="images/RF.PNG" width=565 height=500></span>
-        </section>
-        <!--7. Conception et réalisation-->
-        <section>
-            <h3>7. Conception et réalisation</h3>
-            <h4>Présentation du jeu de donnéest</h4>
+            <h2>6. Conception et réalisation</h2>
+            <h3>Présentation de la base de données</h3>
             <p>
                 AWID (AEGEAN WI-FI INTRUSION)DATASET <br>
                 <a href="http://icsdweb.aegean.gr/awid/">AWID site web</a>
             </p>
             <span class="Name">	<img src="images/AWID_box.png" width=370 height=340></span>
-            <small>AWID est le premier ensemble de données accessible au public qui respecte le protocole réseau
-                802.11</small>
+            <br>
         </section>
-        <!--7. Conception et réalisation : AWID-->
+        <!--6. Conception et réalisation : AWID-->
         <section>
-            <h2>7. Conception et réalisation</h2>
+            <h2>6. Conception et réalisation</h2>
             <small>Environnement de collecte de données du dataset AWID</small>
             <br>
             <span class="Name">	<img src="images/env_AWID.PNG" width=555 height=371></span>
             <br>
         </section>
-        <!--7. Conception et réalisation : AWID-->
+        <!--6. Conception et réalisation : AWID-->
         <section>
-            <h2>7. Conception et réalisation</h2>
+            <h2>6. Conception et réalisation</h2>
             <small> Le nombre d’enregistrement pour chaque classe dans AWID-CLS-R</small>
             <br>
             <br>
@@ -315,78 +318,62 @@
             </table>
             <br>
         </section>
-        <!--7. Conception et réalisation : Sélection d'attributs-->
-        <section>
-            <h2>7. Conception et réalisation</h2>
-            <h3>Sélection d'attributs </h3>
-            <ul>
-                <li>Les divisions supérieures dans Random forest entraînent des gains d'informations plus importants.
-                </li>
-                <li>Donc Les caractéristiques sélectionnées en haut des arborescences sont en général plus
-                    importantes.
-                </li>
-                <li>L'algorithme Random forest peut attribuer une importance de chaque colonne de l'ensemble de
-                    données.
-                </li>
-                <li>On peut sélectionner les colonnes qui ont une importa,ce superieur a un seille donné</li>
-            </ul>
         </section>
-        <!--7. Conception et réalisation : Sélection d'attributs-->
+        <!--6. Conception et réalisation : Sélection d'attributs-->
         <section>
-            <h2>7. Conception et réalisation</h2>
+            <h2>6. Conception et réalisation</h2>
             <h3>Sélection d'attributs </h3>
-            <p> Pour réduir la dimension des données, et accelerer la classification, on choisi 4 ensembles </p>
+            <p> Pour réduir la dimension du données, et accelerer la classification, on choisi 4 ensembles </p>
             <small>
                 <table style="width:125%;align-content: center">
                     <tr>
                         <th>L'ensemble</th>
                         <th>La dimension</th>
-                        <th>Comment il a été construit</th>
+                        <th>Comment il a construit</th>
                     </tr>
                     <tr>
                         <td>Ensemble 1</td>
                         <td>153</td>
-                        <td>En prenant toutes les colonnes sauf celle qui ont un taux de valeur manquantes égale à 1.
+                        <td>En prenant toutes les colonnes sauf celle qui ont un taux de valeur manquant égale à 1.
                         </td>
                     </tr>
                     <tr>
                         <td>Ensemble 2</td>
                         <td>9</td>
-                        <td>En choisissant les 9 plus importantes colonnes dans le modèle généré par l’algorithme Random
+                        <td>En choisissant les 9 plus importantes colonnes dans le modelé généré par l’algorithme Random
                             Forest avec un seul estimateur.
                         </td>
                     </tr>
                     <tr>
                         <td>Ensemble 3</td>
                         <td>21</td>
-                        <td>En choisissant les 21 plus importantes colonnes dans le modèle généré par l’algorithme
+                        <td>En choisissant les 21 plus importantes colonnes dans le modelé générer par l’algorithme
                             Random
                             Forest avec 100 estimateurs.
                         </td>
-                        <!--Tu met un slide où tu explique comment tu utilise RF pour avoir l'importance des attributs-->
                     </tr>
                     <tr>
                         <td>Ensemble 4</td>
                         <td>18</td>
-                        <td>En choisissant les colonnes qui ont une importance plus de 0.03 dans le modèle généré par
+                        <td>En choisissant les colonnes qui ont une importance plus de 0.03 dans le modelé générer par
                             l’algorithme Random Forest avec 200 estimateurs
                         </td>
                     </tr>
                 </table>
             </small>
         </section>
-        <!--7. Conception et réalisation : Environnement technique-->
+        <!--6. Conception et réalisation : Environnement technique-->
         <section>
-            <h2>7. Conception et réalisation</h2>
+            <h2>6. Conception et réalisation</h2>
             <h3> Environnement technique </h3>
             <span class="Name">	<img src="images/env.PNG" width=1000 height=300></span>
             <br>
         </section>
-        <!--8. Résultats-->
+        <!--7. Résultats-->
         <section>
-            <h3>8. Résultats</h3>
+            <h3>7. Résultats</h3>
             <h3>Métriques d'évaluation</h3>
-            <p><i> Nous avons choisi les mesures d'évaluation suivantes : </i></p>
+            <p><i> Nous avons choisi les mesures d'évaluation suivants : </i></p>
             <ol>
                 <li> La précision</li>
                 <li> F1-score</li>
@@ -396,93 +383,99 @@
         </section>
         <!--Résultats-->
         <section>
-            <h3>8. Résultats </h3>
+            <h3>7. Résultats </h3>
             <h5> Random Forest </h5>
             <span class="Name">	<img src="images/results_RF.png" width=1024 height=437></span>
             <br>
-            <small>Il est clair que l'ensemble 4 est le sous-ensemble dont les fonctionnalités sont les plus
-                importantes. Il donne presque les mêmes résultats que l'ensemble de tous les attributs.</small>
         </section>
         <section>
-            <h3>8. Résultats </h3>
+            <h3>7. Résultats </h3>
             <h5> Random Forest : ROC </h5>
             <span class="Name">	<img src="images/roc%20curve/1.png" width=500 height=340></span>
             <span class="Name">	<img src="images/roc%20curve/11.png" width=500 height=340></span>
             <br>
-            <p> le classifieur Random Forest donne une très bonne séparation entre les classes.et il est très
-                performant.</p>
         </section>
         <!--Résultats-->
         <section>
-            <h3>8. Résultats </h3>
+            <h3>7. Résultats </h3>
             <h5> Naive-bayes </h5>
             <span class="Name">	<img src="images/results_NB.png" width=1024 height=437></span>
             <br>
-            <small>L'algorithme NaiveBayes ne prédit pas l'attaque de type impersonation, et sa précision de détecter
-                l'attaque flooding est très faible. </small>
         </section>
         <section>
-            <h3>8. Résultats </h3>
+            <h3>7. Résultats </h3>
             <h5> Naive-bayes : ROC </h5>
             <span class="Name">	<img src="images/roc%20curve/2.png" width=500 height=340></span>
             <span class="Name">	<img src="images/roc%20curve/22.png" width=500 height=340></span>
             <br>
-            <p>Ce classifieur ne donne pas une bonne séparation entre les classes, el il n’est pas efficace dans la
-                détection. </p>
         </section>
         <!--Résultats-->
         <section>
-            <h3>8. Résultats </h3>
+            <h3>7. Résultats </h3>
             <h5> XgBoost </h5>
             <span class="Name">	<img src="images/results_XGboost.png" width=1024 height=437></span>
             <br>
-            <p> L'algorithmes XGboost détecte les deux catégories : le flux normal et l'attaque impersonation avec une
-                précision de 1</p>
         </section>
         <section>
-            <h3>8. Résultats </h3>
+            <h3>7. Résultats </h3>
             <h5> XGBoost : ROC </h5>
             <span class="Name">	<img src="images/roc%20curve/3.png" width=500 height=340></span>
             <span class="Name">	<img src="images/roc%20curve/33.png" width=500 height=340></span>
             <br>
-            <p>ce classifieur est très précis et performant, il donne une très bonne séparation entre les classes.</p>
         </section>
         <section>
-            <h3>8. Résultats </h3>
+            <h3>7. Résultats </h3>
             <h5> ROC de tous les algorithme </h5>
             <span class="Name">	<img src="images/roc%20curve/ROC%20all%20the%20models.png" width=720
                                         height=435></span>
             <br>
-            <small>
-                <ul>
-                    <li>
-                        A Partir de ce graphe, la courbe ROC du modèle naïf bayes indique que ce modèle est moins
-                        capable de
-                        distinguer entre les classes par rapport aux deux autres modèles RF et XGBOOST, ce qu’est vrai
-                        car
-                        ce modèle est incapable de détecter les attaques de type impersonation.
-                    </li>
-                    <li> La courbes ROC du deux modèles Random Forest et XGBoost sont presque idéaux, elles sont très
-                        proche
-                        du coin supérieur gauche ce qui indique une meilleure performance.
-                    </li>
-                </ul>
-            </small>
         </section>
         <!--Résultats-->
         <section>
-            <h2> 8. Résultats </h2>
+            <h2> 7. Résultats </h2>
             <h3>Autres résultats </h3>
+            <br>
+            <br>
+            <br>
+            <p> L'algorithme KNN ne produit pas de bons résultats </p>
+            <br>
+            <p> L'exécution de l'algorithme SVM est très longue.(plus de 5 heures) </p>
+            <br>
+        </section>
+        <!--Interprétation des résultats-->
+        <section>
+            <h3> 8. Interprétation des résultats </h3>
+            <br>
             <ul>
-                <li> L'algorithme KNN ne produit pas de bons résultats</li>
-
-                <li> L'exécution de l'algorithme SVM est très longue.(plus de 5 heures)</li>
-
-                <li>Vu que les faux positifs et les faux négatifs ont un coût similaire donc La précision fonctionne
+                <li> Il est clair que l'ensemble 4 est le sous-ensemble de fonctionnalités le plus important, il
+                    donne presque les mêmes résultats que l'ensemble de tous les attributs.
+                </li>
+                <li> L'algorithme NaiveBayes ne prédit pas l'attaque de type impersonation, et sa précision de détecter
+                    l'attaque flooding est très faible.
+                </li>
+                <li> Les deux algorithmes RF et XGboost donnent des résultats similaires.</li>
+                <li> Les deux algorithmes RF et XGboost détectent les deux catégories : le flux normal et l'attaque
+                    impersonation avec une précision de 1.
+                </li>
+            </ul>
+        </section>
+        <!--Interprétation des résultats-->
+        <section>
+            <h3> 8. Interprétation des résultats </h3>
+            <br>
+            <ul>
+                <li> L'algorithme RF produit une bonne séparation entres les classes (la valeur de AUC est supérieure
+                    à 0.96 pour trois classes).
+                </li>
+                <li> Avec la métrique recall, le Classiﬁeur RF bien classifier le flux normal comme un flux normale
+                    avec une Précisons de 99.9999 %.
+                </li>
+                <li> Vu que les faux positifs et les faux négatifs ont un coût similaire donc La précision fonctionne
                     mieux comme une métrique d'évaluation, Donc comme résultat final de ce projet, l’algorithme Random
                     Forest est le meilleur algorithme pour la classification des attaques dans le dataset AWID.
                 </li>
             </ul>
+
         </section>
         <!--Conclusion et perspectives -->
         <section>
@@ -495,6 +488,7 @@
                 <br>
                 <br>
                 * D'après les tests, le classifieur Random Forest donne de très bons résultats.
+                </br>
             </p>
         </section>
         <!--Conclusion et perspectives -->
