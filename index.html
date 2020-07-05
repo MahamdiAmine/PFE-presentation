@@ -52,7 +52,7 @@
             <p>
                 <small>Réalisé par <a href="www.twitter.com/@MahamdiAmine/">Mahamdi Mohammed </a></small>
                 <br>
-                <small>Encadré par <a href="http://esi.dz">Mme Meziani Leila</a></small>
+                <small>Encadré par <a href="http://esi.dz">Dr. Meziani Lila</a></small>
                 <br>
                 <small>2019/2020</small>
             </p>
@@ -65,8 +65,8 @@
                 <li>Iot</li>
                 <li>Sécurité de l'Iot</li>
                 <li>Apprentissage automatique</li>
-                <li>Les travaux existants</li>
-                <li>La solution proposée</li>
+                <li>Travaux existants</li>
+                <li>Solution proposée</li>
                 <li>Réalisation</li>
                 <li>Tests et Résultats</li>
                 <li>Conclusion et perspectives</li>
@@ -109,7 +109,7 @@
             <h3>1. Introduction (Objectif)</h3>
 
             <p> Afin de répondre à la problématique posée, une solution doit être proposée tout
-                en répondant au objectif suivant :
+                en répondant à cet objectif:
             </p>
             <br>
             <ol>
@@ -159,12 +159,14 @@
         <!--3. Sécurité de l'Iot: Les anomalies existants dans les réseaux Iot-->
         <section>
             <h2>3. Sécurité de l'Iot</h2>
-            <h4>Les anomalies existantes dans les réseaux Iot</h4>
+            <h4>Les anomalies caractérisant les réseaux Iot</h4>
             <br>
             <ul>
-                <li>Injection</li>
-                <li>Flooding</li>
-                <li>Impersonation</li>
+                <li>Injection : Exploitation d'une vulnérabilité existant pour injecter un code malicieux.</li>
+                <li>Flooding : Provoquer une interruption ou une suspension des services.</li>
+                <li>Impersonation : (L’emprunt d’identité) prend la forme d’un clonage de périphérique, usurpation
+                    d’adresse, accès non autorisé.
+                </li>
             </ul>
         </section>
         <!--3. Sécurité de l'Iot: Les contres mesures-->
@@ -175,7 +177,9 @@
             <ul>
                 <li>Antivirus</li>
                 <li>Pare-feu</li>
-                <li>Les IDS</li>
+                <li>Les IDS : Appareil ou une application qui surveille un réseau ou des systèmes pour détecter toute
+                    activité malveillante.
+                </li>
             </ul>
         </section>
         <!--4. apprentissage automatique-->
@@ -233,8 +237,8 @@
             <h3>Pré-traitement</h3>
             <ul>
                 <li> Remplacer les colonnes de type chaînes de caractère par une colonne de valeurs catégorielles.</li>
-                <li> Remplace les données manquantes dans une colonne avec la médiane.</li>
-                <li> Transformer les donnée en une trame de données entièrement numérique.</li>
+                <li> Remplacer les données manquantes dans une colonne avec la médiane.</li>
+                <li> Transformer les données en une trame de données entièrement numérique.</li>
                 <li> La normalisation.</li>
             </ul>
         </section>
@@ -253,7 +257,7 @@
         <section>
             <h3>6. La solution proposée</h3>
             <h4>Les algorithmes d’apprentissage</h4>
-            <h5>Decision Tree</h5>
+            <h5>Arbre de décision ou Decision Tree</h5>
             <small>L'idée derrière un arbre de décision est de rechercher une paire de valeur-variables dans l'ensemble
                 d'apprentissage et de le diviser de manière à générer les meilleurs deux sous-ensembles enfants.</small>
             <small> L'objectif est de créer des branches et des feuilles sur la base d'un critère de fractionnement
@@ -292,14 +296,14 @@
         <!--7. Conception et réalisation : AWID-->
         <section>
             <h2>7. Conception et réalisation</h2>
-            <small> Le nombre d’enregistrement pour chaque classe dans AWID-CLS-R</small>
+            <small> Le nombre d’enregistrements pour chaque classe dans le jeux de données AWID-CLS-R</small>
             <br>
             <br>
             <table style="width:100%">
                 <tr>
                     <th>La classe</th>
-                    <th>Nombre d’enregistrement dans AWID-CLS-R-Trn</th>
-                    <th>Nombre d’enregistrement dans AWID-CLS-R-Tst</th>
+                    <th>Nombre d’enregistrements dans AWID-CLS-R-Trn</th>
+                    <th>Nombre d’enregistrements dans AWID-CLS-R-Tst</th>
                 </tr>
                 <tr>
                     <td>Flooding</td>
@@ -332,20 +336,20 @@
                 <li> La sélection d’attributs améliore la généralisation, la performance et réduit le
                     coût de calcul du classificateur.
                 </li>
-                <li>Donc Les caractéristiques sélectionnées en haut des arborescences sont en général plus
+                <li>Donc les caractéristiques sélectionnées en haut des arborescences sont en général plus
                     importantes.
                 </li>
-                <li>L'algorithme Random forest peut attribuer une importance de chaque colonne de l'ensemble de
+                <li>L'algorithme Random forest peut attribuer une importance à chaque colonne de l'ensemble de
                     données.
                 </li>
-                <li>On peut sélectionner les colonnes qui ont une importance superieur a un seille donné</li>
+                <li>On peut sélectionner les colonnes qui ont une importance superieur a un seuil donné</li>
             </ul>
         </section>
         <!--7. Conception et réalisation : Sélection d'attributs-->
         <section>
             <h2>7. Conception et réalisation</h2>
             <h3>Sélection d'attributs </h3>
-            <p> Pour réduir la dimension des données, et accelerer la classification, on choisi 4 ensembles </p>
+            <p> Pour réduir la dimension des données, et accelerer la classification, on a choisi 4 ensembles </p>
             <small>
                 <table style="width:125%;align-content: center">
                     <tr>
@@ -356,7 +360,7 @@
                     <tr>
                         <td>Ensemble 1</td>
                         <td>153</td>
-                        <td>En prenant toutes les colonnes sauf celle qui ont un taux de valeur manquantes égale à 1.
+                        <td>En prenant toutes les colonnes sauf celles qui ont un taux de valeur manquantes égale à 1.
                         </td>
                     </tr>
                     <tr>
@@ -416,7 +420,7 @@
             <span class="Name">	<img src="images/results_RF.png" width=1024 height=437></span>
             <br>
             <small>Il est clair que l'ensemble 4 est le sous-ensemble dont les fonctionnalités sont les plus
-                importantes. Il donne presque les mêmes résultats que l'ensemble de tous les attributs.</small>
+                importantes. Il donne presque les mêmes résultats que l'ensemble avec tout les attributs.</small>
         </section>
         <section>
             <h3>8. Résultats </h3>
@@ -424,7 +428,7 @@
             <span class="Name">	<img src="images/roc%20curve/1.png" width=500 height=340></span>
             <span class="Name">	<img src="images/roc%20curve/11.png" width=500 height=340></span>
             <br>
-            <p> le classifieur Random Forest donne une très bonne séparation entre les classes.et il est très
+            <p> le classifieur Random Forest donne une très bonne séparation entre les classes, et il est très
                 performant.</p>
         </section>
         <!--Résultats-->
@@ -477,9 +481,10 @@
                         car
                         ce modèle est incapable de détecter les attaques de type impersonation.
                     </li>
-                    <li> La courbes ROC du deux modèles Random Forest et XGBoost sont presque idéaux, elles sont très
+                    <li> La courbes ROC des deux modèles Random Forest et XGBoost sont presque identiques, elles sont
+                        très
                         proche
-                        du coin supérieur gauche ce qui indique une meilleure performance.
+                        du coin supérieur gauche, ce qui indique une meilleure performance.
                     </li>
                 </ul>
             </small>
@@ -494,7 +499,7 @@
                 <li> L'exécution de l'algorithme SVM est très longue.(plus de 5 heures)</li>
 
                 <li>Vu que les faux positifs et les faux négatifs ont un coût similaire donc La précision fonctionne
-                    mieux comme une métrique d'évaluation, Donc comme résultat final de ce projet, l’algorithme Random
+                    mieux comme une métrique d'évaluation. Donc, comme résultat final de ce projet, l’algorithme Random
                     Forest est le meilleur algorithme pour la classification des attaques dans le dataset AWID.
                 </li>
             </ul>
@@ -502,7 +507,6 @@
         <!--Conclusion et perspectives -->
         <section>
             <h3> Conclusion et perspectives </h3>
-            <h4> Réponse à la problématique </h4>
             <p>
                 * Nous avons réalisé des modèles basés sur d’apprentissage machine pour la classification et la
                 détection des attaques. Une comparaison de ces modèles en termes d'efficacité est fournie pour
